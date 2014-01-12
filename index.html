@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Angular.js - WT Parsoid editor</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-sanitize.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body ng-app="app">
+    <div ng-controller="MainCtrl">
+        <h1>Angular.js - WT Parsoid editor</h1>
+        <form name="editorForm" novalidate>
+            <textarea name="inputText" id="inputText" cols="60" rows="15" ng-model="inputText"></textarea>
+            <br>
+            <button type="submit" ng-click="useResource()">Parse WT</button>
+        </form>
+        <div ng-show="parsedText">
+            <div ng-bind-html="parsedText">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
