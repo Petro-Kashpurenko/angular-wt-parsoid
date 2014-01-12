@@ -16,7 +16,7 @@ app.factory('Parsoid', function($http) {
     return {
         parseWT: function(inputText) {
             $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
-            return $http.post('http://localhost:8000/enwiki/', "wt=\n" + inputText);
+            return $http.post('http://localhost:8000/enwiki/', "wt=\n" + encodeURIComponent(inputText));
         }
     };
 });
