@@ -19,7 +19,7 @@ Enable CORS for your Parsoid service in localsettings.js
 
 Ensure that your service is started and you have correct address in main.js 
 
-    return $http.post('http://localhost:8000/enwiki/', "wt=\n" + inputText);
+    return $http.post('http://localhost:8000/enwiki/', ... );
     
     
 ============================
